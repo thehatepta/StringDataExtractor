@@ -46,10 +46,10 @@ public class StringDataServiceImp implements StringDataService {
     }
 
     private int countSentences(String target, BreakIterator iterator) {
-        StringBuffer markers = new StringBuffer();
+        StringBuilder markers = new StringBuilder();
         markers.setLength(target.length() + 1);
-        for (int k = 0; k < markers.length(); k++) {
-            markers.setCharAt(k, ' ');
+        for (int i = 0; i < markers.length(); i++) {
+            markers.setCharAt(i, ' ');
         }
         int count = 0;
         iterator.setText(target);
